@@ -15,16 +15,15 @@ public class CloneScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		string tag = collision.gameObject.tag;
-		if (tag == "Arrow") {
-			Debug.Log("COLLISION with: " +  collision.gameObject.tag);
+		if (this.gameObject.tag == "Neutral" && tag == "Arrow") {
+			// Debug.Log("COLLISION with: " +  collision.gameObject.tag);
 			if (this.gameObject.GetComponent("movement") == null) {
 				this.gameObject.AddComponent("movement");
-				GameObject cylinder = this.gameObject.transform.Find("Cylinder").gameObject;
-				if (cylinder.GetComponent("ShootScript") == null) {
-					cylinder.AddComponent("ShootScript");
-					((ShootScript)cylinder.GetComponent("ShootScript")).playerTransform = this.transform;
-				}
 			}
+			if (this.gameObject.GetComponent("ShootScript") == null) {
+				this.gameObject.AddComponent("ShootScript");
+			}
+			this.gameObject.tag = "Player";
 		}
 		
 	}

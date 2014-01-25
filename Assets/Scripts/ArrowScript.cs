@@ -21,8 +21,8 @@ public class ArrowScript : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		string tag = collision.gameObject.tag;
-		if (tag == "Neutral") {
-			Debug.Log("COLLISION with: " +  collision.gameObject.tag);
+		if (tag == "Neutral" || tag == "Player") {
+			// Debug.Log("COLLISION with: " +  collision.gameObject.tag);
 			Destroy(this.gameObject);
 		}
 
