@@ -11,7 +11,7 @@ public class MainGameControlScript : MonoBehaviour {
 	void Start () {
 		// Define level: "SceneName" dictionary here.
 		this.levels.Add (1, "theGrid");
-		// this.levels.Add (2, "<SCENE_NAME>");
+		this.levels.Add (2, "Level2");
 		// this.levels.Add (3, "<SCENE_NAME>");
 	}
 
@@ -27,7 +27,7 @@ public class MainGameControlScript : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.N)) {
 			// Load the next level or if max level reached.
-			if (this.currentLevel == 0) {
+			if (this.currentLevel <= 0) {
 				this.currentLevel = 1;
 			}
 			this.currentLevel = this.currentLevel + 1;
