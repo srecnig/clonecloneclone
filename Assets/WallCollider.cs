@@ -14,6 +14,12 @@ public class WallCollider : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c){
+		// arrows shall not pass through a wall
+		if (c.gameObject.tag == "Arrow") {
+			Destroy(c.collider.gameObject);
+		}
+
+		// clone shall not pass through a wall
 		if (Input.GetKey(KeyCode.W)) {
 			c.gameObject.transform.parent.Translate(0,-1,0);
 		}
