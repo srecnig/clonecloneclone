@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ArrowScript : MonoBehaviour {
 
-	public float shootSpeed = 15.0F;
+	public float shootSpeed = 5.0F;
 
 	// Use this for initialization
 	void Start () {
@@ -17,5 +17,14 @@ public class ArrowScript : MonoBehaviour {
 		    || this.transform.position.x > 10 || this.transform.position.x < 0) {
 			Destroy(this.gameObject);
 		}
+	}
+
+	void OnCollisionEnter(Collision collision) {
+		string tag = collision.gameObject.tag;
+		if (tag == "Neutral" || tag == "Player") {
+			// Debug.Log("COLLISION with: " +  collision.gameObject.tag);
+			Destroy(this.gameObject);
+		}
+
 	}
 }
