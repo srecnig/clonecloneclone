@@ -17,7 +17,7 @@ public class IsSwitchScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		if (!c.gameObject.name.Equals("wall")) {
+		if (!c.gameObject.name.Equals("wall") && !c.gameObject.tag.Equals( "Arrow"))  {
 			// check if it's the player
 			Debug.Log("PRESSED SWITCH!");
 			on = true;
