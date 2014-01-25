@@ -13,5 +13,8 @@ Library/assetDatabase3
 Library/guidmapper
 Library/metadata/*
 Library/ScriptMapper
+Library/CurrentLayout.dwlt
+Library/InspectorExpandedItems.asset
+Library/expandedItems
 obj
 Temp
