@@ -12,5 +12,6 @@ Library/AssetServerCacheV3
 Library/assetDatabase3
 Library/guidmapper
 Library/metadata/*
+Library/ScriptMapper
 obj
 Temp
