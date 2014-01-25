@@ -13,6 +13,10 @@ public class ArrowScript : MonoBehaviour {
 	void Update () {
 		float move = Time.deltaTime * shootSpeed;
 		this.transform.Translate (0, move, 0);
+		if (this.transform.position.y > 10 || this.transform.position.y < 0
+		    || this.transform.position.x > 10 || this.transform.position.x < 0) {
+			Destroy(this.gameObject);
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
