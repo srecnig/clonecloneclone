@@ -8,9 +8,9 @@
 /Library/cache/
 /Library/previews/
 /Library/ScriptAssemblies
-/Library/AssetServerCacheV3
-/Library/assetDatabase3
-/Library/guidmapper
-/Library/metadata/*
+Library/AssetServerCacheV3
+Library/assetDatabase3
+Library/guidmapper
+Library/metadata/*
 /obj
 /Temp
