@@ -659,9 +659,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 257844219}
-  - 114: {fileID: 257844220}
   - 114: {fileID: 257844218}
   - 114: {fileID: 257844217}
+  - 114: {fileID: 257844220}
   m_Layer: 0
   m_Name: clone
   m_TagString: Untagged
@@ -4418,6 +4418,7 @@ GameObject:
   - 33: {fileID: 2105354803}
   - 136: {fileID: 2105354802}
   - 23: {fileID: 2105354801}
+  - 114: {fileID: 2105354804}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -4480,6 +4481,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1735402550}
   m_GameObject: {fileID: 2105354799}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2105354804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105354799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6e7d3a92bec467c9e943c9dbf1d239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
 --- !u!1 &2135207016
 GameObject:
   m_ObjectHideFlags: 0
