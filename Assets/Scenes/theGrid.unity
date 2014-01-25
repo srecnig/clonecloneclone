@@ -659,12 +659,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 257844219}
-  - 114: {fileID: 257844220}
   - 114: {fileID: 257844218}
   - 114: {fileID: 257844217}
+  - 114: {fileID: 257844220}
   m_Layer: 0
   m_Name: clone
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3684,6 +3684,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: bd72531843e795e4c8348704fda646b6, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd72531843e795e4c8348704fda646b6, type: 2}
   m_RootGameObject: {fileID: 257844216}
@@ -3989,6 +3993,7 @@ GameObject:
   - 33: {fileID: 1936160689}
   - 65: {fileID: 1936160688}
   - 23: {fileID: 1936160687}
+  - 114: {fileID: 1936160691}
   m_Layer: 0
   m_Name: goal
   m_TagString: Untagged
@@ -4043,10 +4048,21 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1936160686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 6.5, z: 0}
+  m_LocalPosition: {x: 9.5, y: 6.5, z: .200000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1936160691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936160686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10fb5147c70145d7841cc9fbe9c3d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004917088
 GameObject:
   m_ObjectHideFlags: 0
