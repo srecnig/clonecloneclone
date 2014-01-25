@@ -14,6 +14,6 @@ public class GoalScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		Debug.Log("collission!");
+		Debug.Log(c.collider);
 	}
 }
