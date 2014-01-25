@@ -21,6 +21,8 @@ public class IsSwitchScript : MonoBehaviour {
 	}
 
 	void OnCollisionExit(Collision c) {
-		Debug.Log("LEFT SWITCH!");
+		GameObject door = GameObject.Find(isSwitchFor);
+		Debug.Log("LEFT SWITCH! destroying: " + door);
+		Destroy(door);
 	}
 }
