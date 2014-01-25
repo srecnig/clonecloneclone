@@ -19,6 +19,11 @@ public class CloneScript : MonoBehaviour {
 			Debug.Log("COLLISION with: " +  collision.gameObject.tag);
 			if (this.gameObject.GetComponent("movement") == null) {
 				this.gameObject.AddComponent("movement");
+				GameObject cylinder = this.gameObject.transform.Find("Cylinder").gameObject;
+				if (cylinder.GetComponent("ShootScript") == null) {
+					cylinder.AddComponent("ShootScript");
+					((ShootScript)cylinder.GetComponent("ShootScript")).playerTransform = this.transform;
+				}
 			}
 		}
 		
