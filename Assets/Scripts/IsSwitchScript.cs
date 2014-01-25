@@ -4,6 +4,7 @@ using System.Collections;
 public class IsSwitchScript : MonoBehaviour {
 
 	public string isSwitchFor;
+	public bool on;
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +17,20 @@ public class IsSwitchScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		// only if the player or a clone pressed it.
-		Debug.Log("PRESSED SWITCH!");
+		if (c.collider.name == "neutral" || c.collider.name == "clone") {
+			on = true;
+			// TODO: check if all the other switches for the same target are on
+			GameObject door = GameObject.Find(isSwitchFor);
+			// door.remove material
+			// door.remove wall script
+			Debug.Log("PRESSED SWITCH!");
+		}
 	}
 
 	void OnCollisionExit(Collision c) {
-		GameObject door = GameObject.Find(isSwitchFor);
-		Debug.Log("LEFT SWITCH! destroying: " + door);
-		Destroy(door);
+		on = false;
+		// door.add material
+		// door.add wall script
+		Debug.Log("LEFT SWITCH!");
 	}
 }
