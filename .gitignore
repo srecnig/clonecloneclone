@@ -5,7 +5,7 @@
 *.unityproj
 .DS_Store
 Library/FailedAssetImports.txt
-/Library/cache/
+Library/cache/
 Library/previews/
 Library/ScriptAssemblies
 Library/AssetServerCacheV3
