@@ -17,20 +17,24 @@ public class IsSwitchScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		if (c.collider.name == "neutral" || c.collider.name == "clone") {
+		if (!c.gameObject.name.Equals("wall")) {
+			// check if it's the player
+			Debug.Log("PRESSED SWITCH!");
 			on = true;
 			// TODO: check if all the other switches for the same target are on
 			GameObject door = GameObject.Find(isSwitchFor);
-			// door.remove material
-			// door.remove wall script
-			Debug.Log("PRESSED SWITCH!");
+			// door.remove material renderer
+			door.GetComponent<WallCollider>().enabled = false;
+			door.GetComponent<BoxCollider>().enabled = false;
 		}
 	}
 
 	void OnCollisionExit(Collision c) {
 		on = false;
 		// door.add material
-		// door.add wall script
+		GameObject door = GameObject.Find(isSwitchFor);
+		door.GetComponent<WallCollider>().enabled = true;
+		door.GetComponent<BoxCollider>().enabled = true;
 		Debug.Log("LEFT SWITCH!");
 	}
 }
