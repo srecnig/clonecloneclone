@@ -15,7 +15,8 @@ public class ShootScript : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			// instantiate arrow prefab
 			GameObject arrow = Instantiate(Resources.Load("Arrow")) as GameObject; 
-			arrow.transform.position = playerTransform.position;
+			arrow.transform.position = this.playerTransform.position;
+			arrow.transform.rotation = this.playerTransform.rotation;
 			arrow.AddComponent("ArrowScript");
 		}
 	}
