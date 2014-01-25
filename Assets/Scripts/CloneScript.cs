@@ -17,11 +17,11 @@ public class CloneScript : MonoBehaviour {
 		string tag = collision.gameObject.tag;
 		if (this.gameObject.tag == "Neutral" && tag == "Arrow") {
 			// Debug.Log("COLLISION with: " +  collision.gameObject.tag);
-			if (this.gameObject.GetComponent("movement") == null) {
-				this.gameObject.AddComponent("movement");
+			if (this.transform.parent.gameObject.GetComponent("movement") == null) {
+				this.transform.parent.gameObject.AddComponent("movement");
 			}
-			if (this.gameObject.GetComponent("ShootScript") == null) {
-				this.gameObject.AddComponent("ShootScript");
+			if (this.transform.parent.gameObject.GetComponent("ShootScript") == null) {
+				this.transform.parent.gameObject.AddComponent("ShootScript");
 			}
 			this.gameObject.tag = "Player";
 		}
