@@ -32,19 +32,23 @@ public class MainGameControlScript : MonoBehaviour {
 			Application.LoadLevel(currentLevel);
 		}
 		if (Input.GetKeyDown(KeyCode.N)) {
-			// Load the next level or if max level reached.
-			if (this.currentLevel <= 0) {
-				this.currentLevel = 1;
-			}
-			this.currentLevel = this.currentLevel + 1;
-			string nextLevel;
-			this.levels.TryGetValue(this.currentLevel, out nextLevel);
-			if (nextLevel == null) {
-				this.currentLevel = 1;
-				Application.LoadLevel("theGrid_1");
-			} else {
-				Application.LoadLevel(nextLevel);
-			}
+			this.loadNextLevel();
+		}
+	}
+
+	public void loadNextLevel() {
+		// Load the next level or if max level reached.
+		if (this.currentLevel <= 0) {
+			this.currentLevel = 1;
+		}
+		this.currentLevel = this.currentLevel + 1;
+		string nextLevel;
+		this.levels.TryGetValue(this.currentLevel, out nextLevel);
+		if (nextLevel == null) {
+			this.currentLevel = 1;
+			Application.LoadLevel("theGrid_1");
+		} else {
+			Application.LoadLevel(nextLevel);
 		}
 	}
 
