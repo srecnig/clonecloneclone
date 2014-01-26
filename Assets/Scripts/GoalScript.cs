@@ -14,6 +14,8 @@ public class GoalScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision c) {
-		Debug.Log(c.collider);
+		// are you the player or a clone?
+		// if yes, move to next level.
+		Debug.Log("MOVE ON TO THE FRACKIN NEXT LEVEL!");
 	}
 }
