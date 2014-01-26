@@ -19,9 +19,20 @@ public class IsSwitchScript : MonoBehaviour {
 	void OnCollisionEnter(Collision c) {
 		if (!c.gameObject.name.Equals("wall") && !c.gameObject.tag.Equals( "Arrow"))  {
 			// check if it's the player
-			Debug.Log("PRESSED SWITCH!");
+			//Debug.Log("PRESSED SWITCH!");
 			on = true;
-			// TODO: check if all the other switches for the same target are on
+
+			// only open the door if all the other switches for the same target are on
+			foreach(GameObject switchObj in GameObject.FindGameObjectsWithTag("switch"))
+			{
+				if(switchObj.GetComponent<IsSwitchScript>().on == false)
+				{
+					Debug.Log("RETURNING");
+					return;
+				}
+			}
+
+		
 			GameObject door = GameObject.Find(isSwitchFor);
 			// door.remove renderer
 			door.GetComponent<Renderer>().enabled = false;
