@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/theGrid_5.unity
   - enabled: 1
     path: Assets/Scenes/theGrid_6.unity
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
