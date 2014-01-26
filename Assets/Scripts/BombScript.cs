@@ -14,7 +14,6 @@ public class BombScript : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision c){
 		if (c.gameObject.tag != "Arrow"){
-			GameObject.FindGameObjectWithTag("ground").gameObject.audio.Play();
 			Destroy (c.collider.transform.root.gameObject);
 			Destroy (this.gameObject);
 		}
