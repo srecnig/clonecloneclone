@@ -10,8 +10,11 @@ public class MainGameControlScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Define level: "SceneName" dictionary here.
-		this.levels.Add (1, "theGrid");
-		this.levels.Add (2, "Level2");
+		this.levels.Add (1, "theGrid_1");
+		this.levels.Add (2, "theGrid_2");
+		this.levels.Add (3, "theGrid_3");
+		// this.levels.Add (1, "theGrid");
+		// this.levels.Add (2, "Level2");
 		// this.levels.Add (3, "<SCENE_NAME>");
 	}
 
@@ -35,7 +38,7 @@ public class MainGameControlScript : MonoBehaviour {
 			this.levels.TryGetValue(this.currentLevel, out nextLevel);
 			if (nextLevel == null) {
 				this.currentLevel = 1;
-				Application.LoadLevel("theGrid");
+				Application.LoadLevel("theGrid_1");
 			} else {
 				Application.LoadLevel(nextLevel);
 			}
