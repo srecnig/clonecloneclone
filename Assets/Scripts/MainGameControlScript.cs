@@ -16,6 +16,7 @@ public class MainGameControlScript : MonoBehaviour {
 		this.levels.Add (4, "theGrid_4");
 		this.levels.Add (5, "theGrid_5");
 		this.levels.Add (6, "theGrid_6");
+		this.levels.Add (7, "Credits");
 		// this.levels.Add (1, "theGrid");
 		// this.levels.Add (2, "Level2");
 		// this.levels.Add (3, "<SCENE_NAME>");
